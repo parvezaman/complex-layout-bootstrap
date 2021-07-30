@@ -23,6 +23,38 @@
         #half-ticket img{
             height: 200px;
         }
+
+
+        /* use of before and after */
+        blockquote::before{
+            content: open-quote;
+            color: brown;
+            font-size: 5rem;
+        }
+        blockquote::after{
+            content: close-quote;
+            color: brown;
+            font-size: 2rem;
+        }
+
+
+        .section-title{
+            display: inline-block;
+        }
+        .section-title::after, .section-title:hover::before{
+            content: '';
+            display: block;
+            background-color: brown;
+            height: 3px;
+            width: 100%;
+        }
+        /* .section-title::after, .section-title::before{
+            content: '';
+            display: block;
+            background-color: brown;
+            height: 3px;
+            width: 100%;
+        } */
     </style>
 </head>
 <body>
@@ -112,6 +144,22 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+    <section class="container">
+        <h1 class="display-1 m-5 section-title">Use of before and after</h1>
+        <div>
+            <blockquote>The most superior way of asking for forgiveness from Allah is: 'Allahumma anta Rabbi la ilaha illa anta, Anta Khalaqtani wa ana `Abduka, wa ana 'ala ahdika wa wa'dika mastata'tu, A`udhu bika min Sharri ma sana'tu, abu'u Laka bini'matika 'alaiya, wa abu'u laka bidhanbi faghfir lee fa innahu la yaghfiru adhdhunuba illa anta.</blockquote>
+
+            <blockquote>The uttering of the words: "Subhan-Allah (Allah is free from imperfection), Al-hamdu lillah (all praise is due to Allah), La ilaha illallah (there is no true god except Allah) and Allahu Akbar (Allah is the Greatest)' is dearer to me than anything over which the sun rises.</blockquote>
+        </div>
+    </section>
+    
+
 
 
     <!-- js bootstrap -->
